@@ -21,11 +21,11 @@ $(function () {
     var d6_2 = [["Jan", 59],["Feb", 49],["Mar", 45],["Apr", 94],["May", 76],["Jun", 22],["Jul", 31]];
     $.plot("#area-chart-spline", [{
         data: d6_1,
-        label: "Upload",
+        label: "Outbound",
         color: "#ffce54"
     },{
         data: d6_2,
-        label: "Download",
+        label: "Inbound",
         color: "#01b6ad"
     }], {
         series: {

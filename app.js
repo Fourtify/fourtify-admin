@@ -30,10 +30,10 @@ var app = express();
             throw err;
         }
     });
-
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');*/
+app.set('view engine', 'jade');
 
 app.use(compression());
 
@@ -50,6 +50,10 @@ app.use(function(req, res, next){
     next();
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 604800000 }));
+
+app.use('/', require('./routes/routes.js'));
+
+
 //app.use('/bower', express.static(path.join(__dirname, 'bower_components'), { maxAge: 604800000 }));
 
 //Sessions
